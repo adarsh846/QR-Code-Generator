@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f7;
+    margin: 0;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Title Styling */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+}
+
+input[type="text"] {
+    padding: 15px;
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #007aff;
+}
+
+/* Button Styling */
+button {
+    padding: 15px 20px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #005bbb;
+}
+
+/* QR Code Display */
+.qrcode-container {
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInAndGrow 0.5s ease forwards;
+}
+
+/* iPhone Notification */
+.notification {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    color: white;
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+/* Notification Text */
+.notification-text {
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Notification Animation */
+@keyframes slideDown {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    100% {
+        top: -20px;
+        opacity: 1;
+    }
+}
+
+/* Fade-In and Grow Animation for QR Code */
+@keyframes fadeInAndGrow {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    button {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Download Button Styling */
+#download-btn {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #34c759;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none; /* Hidden initially */
+    transition: background-color 0.2s ease;
+}
+
+#download-btn:hover {
+    background-color: #28a745;
+}
